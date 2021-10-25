@@ -216,9 +216,9 @@ class SignatureUtil {
     var SECP256K1_N = decodeBigInt(hex.decode(
         'fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141'));
 
-    if (encodeBigInt(r).length != 32 || encodeBigInt(s).length != 32) {
-      return false;
-    }
+//     if (encodeBigInt(r).length != 32 || encodeBigInt(s).length != 32) {
+//       return false;
+//     }
 
     if (!_isValidSigRecovery(_calculateSigRecovery(v, chainId: chainId))) {
       return false;
